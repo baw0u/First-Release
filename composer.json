@@ -1,0 +1,14 @@
+{
+    "name": "baw0u/indieteq-php-my-sql-pdo-database-class",
+    "description": "SPDA - Simple PDO Database Abstraction",
+    "type": "library",
+    "keywords": [ "mysql", "pdo", "php", "beer", "free" ],
+    "homepage": "https://github.com/baw0u/spda",
+    "license": "Beerware",
+    "authors": [
+        { "name": "Vincent Herbaut - Ikon-K", "email": "contact@herbaut-vincent.com" }
+    ],
+    "require": {
+         "php": ">=5.3.0"
+    }
+}
