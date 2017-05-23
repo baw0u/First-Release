@@ -1,5 +1,5 @@
 {
-    "name": "baw0u/indieteq-php-my-sql-pdo-database-class",
+    "name": "baw0u/spda",
     "description": "SPDA - Simple PDO Database Abstraction",
     "type": "library",
     "keywords": [ "mysql", "pdo", "php", "beer", "free" ],
