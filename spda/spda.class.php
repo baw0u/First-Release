@@ -7,7 +7,7 @@
  * @version     1.0
  *
  **/
-namespace spda;
+namespace baw0u;
 use \PDO;
 use \Exception;
 
@@ -86,11 +86,11 @@ class spda{
     public static function table($table='', $params=false){
         if(is_array($params)):
             $dbHost = isset($params['dbHost']) ? $params['dbHost'] : 'localhost';
-            $dbuser = $params['dBuser'];
-            $dbpass = $params['dbPass'];
+            $dbUser = $params['dbUser'];
+            $dbPass = $params['dbPass'];
             $dbname = $params['dbName'];
             $dbEncoding = isset($params['dbEncoding']) ? $params['dbEncoding'] : 'utf8';
-            $debug = false;
+            $debug = isset($params['debug']) ? $params['debug'] : false;
         else:
             $dbHost = spdaConfig::$dbHost;
             $dbUser = spdaConfig::$dbUser;
@@ -567,42 +567,42 @@ class spda{
     }
 
     public function where_in($field = '', $values = '', $table = false) {
-        if(!is_array($values)):
+        if(is_array($values)):
             $values = explode(',', str_replace(' ', '', $values));
         endif;
         return $this->where($field, $values, $table, false, 'AND', 'IN');
     }
 
     public function where_not_in($field = '', $values = '', $table = false){
-        if(!is_array($values)):
+        if(is_array($values)):
             $values = explode(',', str_replace(' ', '', $values));
         endif;
         return $this->where($field, $values, $table, false, 'AND', 'NOT IN');
     }
 
     public function and_in($field = '', $values = '', $table = false){
-        if(!is_array($values)):
+        if(is_array($values)):
             $values = explode(',', str_replace(' ', '', $values));
         endif;
         return $this->where($field, $values, $table, false, 'AND', 'IN');
     }
 
     public function and_not_in($field = '', $values = '', $table = false){
-        if(!is_array($values)):
+        if(is_array($values)):
             $values = explode(',', str_replace(' ', '', $values));
         endif;
         return $this->where($field, $values, $table, false, 'AND', 'NOT IN');
     }
 
     public function or_in($field = '', $values = '', $table = false){
-        if(!is_array($values)):
+        if(is_array($values)):
             $values = explode(',', str_replace(' ', '', $values));
         endif;
         return $this->where($field, $values, $table, false, 'OR', 'IN');
     }
 
     public function or_not_in($field = '', $values = '', $table = false) {
-        if(!is_array($values)):
+        if(is_array($values)):
             $values = explode(',', str_replace(' ', '', $values));
         endif;
         return $this->where($field, $values, $table, false, 'OR', 'NOT IN');
@@ -834,10 +834,10 @@ class spda{
 
                 if(mb_stripos($w['operator'], 'IN') !== false):
 
-                    foreach($w['value'] as $wkey => $wval):
+                    /*foreach($w['value'] as $wkey => $wval):
                         $w['value'][$wkey] = $wval;
                         $w['value'][$wkey] = '\''.$this->escape($wval).'\'';
-                    endforeach;
+                    endforeach;*/
 
                     if(gettype($w['value']) == "string"):
                         $where.= " `{$w['table']}`.`{$w['field']}` {$w['operator']} (".$w['value'].') ';
@@ -896,14 +896,10 @@ class spda{
     
     public function escape($val){
         if(is_int($val)):
-            return (int)$val;
+            return $val;
         endif;
         if(!$this->magic_quotes_gpc):
-            if($this->script_type == "pdo"):
-                return $this->db->quote($val);
-            else:
-                return $this->db->real_escape_string($val);
-            endif;
+            return $this->db->quote($val);
         endif;
         return $val;
     }

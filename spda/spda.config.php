@@ -7,13 +7,13 @@
  * @version     1.0
  *
  **/
-namespace spda;
+namespace baw0u;
 
 class spdaConfig{
     /* Default database connexion */
-    public static $dbNname = 'dbName'; // Your database name
-    public static $dbUser = 'dbUser'; // Your database username
-    public static $dbPass = 'dbPass'; // // Your database password
+    public static $dbNname = 'xcrud'; // Your database name
+    public static $dbUser = 'root'; // Your database username
+    public static $dbPass = 'root'; // // Your database password
     public static $dbHost = 'localhost'; // Your database host, 'localhost' is default
     public static $dbEncoding = 'utf8'; // Your database encoding
     public static $autoReset = true; // Resets the conditions after the query
