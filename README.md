@@ -4,7 +4,7 @@
 created: 05/24/2017  
 latest update: 05/24/2017  
 by: Vincent HERBAUT  
-email: [contact@herbaut-vincent.com](mailto:contact@herbaut-vincent.com)
+email: [contact@herbaut-vincent.com](mailto:contact@herbaut-vincent.com)  
 version: 0.1   
 
 Powerful actions in simple methods. No SQL code writing.  
