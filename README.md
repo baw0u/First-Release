@@ -104,6 +104,3 @@ $posts->insert($new_post); // insert new post to database
 
 **Vincent Herbaut**
 * [http://www.vincent-herbaut.com](http://www.vincent-herbaut.com)
-* [http://twitter.com/adamdehaven](http://twitter.com/adamdehaven)
-* [http://github.com/adamdehaven](http://github.com/adamdehaven)
-* [http://dribbble.com/adamdehaven](http://dribbble.com/adamdehaven)
