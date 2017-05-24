@@ -26,11 +26,11 @@ The script allows you to organize the work with database with a simple methods a
 
 ### Instalation
 
-**Download with Composer  **
+**Download with Composer**
 ```
 composer require baw0u/spda
 ```
-**Or upload and connect  **  
+**Or upload and connect**  
 Upload **spda** on your server  
 Open **spda.config.php** and configure your database connexion  
 ```
