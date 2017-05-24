@@ -103,4 +103,4 @@ $posts->insert($new_post); // insert new post to database
 ## AUTHOR
 
 **Vincent Herbaut**
-* [http://www.vincent-herbaut.com](http://www.vincent-herbaut.com)
+* [http://www.herbaut-vincent.com](http://www.herbaut-vincent.com)
